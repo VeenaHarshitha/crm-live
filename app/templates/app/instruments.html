@@ -1,0 +1,175 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head-meta %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale = 1.0">
+	<meta http-equiv="X-UA-Compaatible" content="ie=edge">
+  {% endblock %}
+
+  {% block head-css %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+	<!-- Favicon -->
+	<link href="{% static "images/Untitled-2.png" %} " rel="shortcut icon"/>
+  {% endblock %}
+
+  {% block head-title %}
+	<title>Instruments</title>
+  {% endblock %}
+	</head>
+
+<body>
+	
+	<header class="header-section  mb-4">
+		<div class="site-logo">
+			<img src="{% static "images/Untitled-3.png" %}" style="height:70px;width:150px;">
+		</div>
+		<div class="header-right">
+			<div class="user-panel">
+				<p>Hello,{{request.user}} <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a></p> 	
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-sm-6 ">
+				<div class="thumbnail">
+					<div class="card mb-4">
+  						<img class="card-img-top" src="{% static "images/g.jpg" %}" alt="Guitar" style="height:220px;">
+  						<div class="card-body">
+    						<h5 class="card-title">Guitar</h5>
+   							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    						<a href="{% url 'ginstructions' %}" class="btn btn-primary">Go</a>
+  						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6 ">
+				<div class="thumbnail">
+					<div class="card" >
+  						<img class="card-img-top" src="{% static "images/v.jpg" %}" alt="Violin" style="height:220px;">
+  						<div class="card-body">
+    						<h5 class="card-title">Violin</h5>
+   							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    						<a href="{% url 'vinstructions' %}" class="btn btn-primary">Go </a>
+  						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<div class="card" >
+  						<img class="card-img-top" src="{% static "images/p.jpg" %}" alt="Piano" style="height:220px;">
+  						<div class="card-body">
+    						<h5 class="card-title">Piano</h5>
+   							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    						<a href="{% url 'pinstructions' %}" class="btn btn-primary">Go </a>
+  						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<div class="card" >
+  						<img class="card-img-top" src="{% static "images/d.jpg" %}" alt="Drums" style="height:220px;">
+  						<div class="card-body">
+    						<h5 class="card-title">Drums</h5>
+   							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    						<a href="{% url 'dinstructions' %}" class="btn btn-primary">Go </a>
+  						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<div class="card" >
+  						<img class="card-img-top" src="{% static "images/f.png" %}" alt="Flute" style="height:220px;">
+  						<div class="card-body">
+    						<h5 class="card-title">Flute</h5>
+   							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    						<a href="{% url 'finstructions' %}" class="btn btn-primary">Go</a>
+  						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="thumbnail">
+					<div class="card mb-4" >
+  						<img class="card-img-top" src="{% static "images/t.jpg" %}" style="height:220px;"
+  						 alt="Trumpet">
+  						<div class="card-body">
+    						<h5 class="card-title">Trumpet</h5>
+   							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    						<a href="{% url 'tinstructions' %}" class="btn btn-primary">Go </a>
+  						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+<style type="text/css">
+	body,html{
+  		font-family: 'EB Garamond', serif;
+  		background: url({% static "images/2559.png" %});
+	}
+	header{
+		background: url({% static "images/2559.png" %});
+	
+	}
+	.header-section {
+	padding-left: 55px;
+	padding-right: 72px;
+	
+	height: 70px;
+	}
+	.header-section h1 {
+		color: white;
+		font-size: 20px;
+	}
+	.header-right .user-panel p {
+		font-size: 16px;
+		color: #ffffff;
+		margin: 10 10px;
+	}
+	.site-logo {
+		display: inline-block;
+		padding: 0;
+		padding: 4px;
+	}
+	.header-right {
+		float: right;
+		padding: 14px 0;
+		margin-left: 100px;
+	}
+	.header-right .user-panel {
+		display: inline-block;
+	}
+
+	.header-right .user-panel a {
+		font-size: 16px;
+		color: #ffffff;
+		margin: 0 10px;
+	}
+	.btn {
+		background-color: #660066;
+		color: white;
+		border: none;
+		border-radius: 0px;
+	}
+	.btn:hover {
+		background-color: #660066;
+		color: white;
+	}
+	a .btn .btn-primary{
+		font-size: 25px;
+	}
+</style>
+</html>
+
